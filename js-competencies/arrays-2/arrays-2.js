@@ -1,4 +1,3 @@
-
 //+++++++++ Start Here! All problems are below. +++++++++//
 
 
@@ -10,7 +9,10 @@
 //addMoreDucks should return the array.
 
 //Code here
-
+let addMoreDucks = arr => {
+    arr.length > 4 ? arr.splice(2, 1, '42 ducks') : null
+    return arr
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -19,7 +21,10 @@
 //the 3rd element of the array. cutItOut should return the array.
 
 //Code here
-
+let cutItOut = function(arr) {
+    arr.length > 4 ? arr.splice(2, 1) : null
+    return arr
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -29,3 +34,7 @@
 
 //Code here
 
+function changeName(arr) {
+    arr.splice(arr.indexOf('Tolkn'), 1, 'Tolkien')
+    return arr
+}

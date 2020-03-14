@@ -8,8 +8,9 @@
 //'...here be dragons' to the end of each element. 
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
-  
-  //Code here
+
+//Code here
+let dragonMapper = arr => arr.map(e => `${e}...here be dragons`)
 
 
 
@@ -19,9 +20,12 @@
 //in an array and filters out every object that
 //does NOT have the key favoriteCookie.
 //cookieLoversOnly should return the filtered array.
-  
-  //Code here
 
+//Code here
+function cookieLoversOnly(arr) {
+    return arr.filter(e => e.hasOwnProperty('favoriteCookie'))
+        // console.log(this)
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -34,8 +38,12 @@
 //Hint: there is an array method for this.
 
 
-  //Code here
-
+//Code here
+function changeValue(arr, cb) {
+    arr.forEach(element => {
+        return cb(element)
+    });
+}
 
 
 //////////////////PROBLEM 4////////////////////
@@ -45,9 +53,11 @@
 //the elements (here the word product means the result 
 //of multiplying all the elements together)
 //Return the product.
-  
-  //Code here
 
+//Code here
+let findProduct = function(arr) {
+    return arr.reduce((acc, ele) => acc *= ele, 1)
+}
 
 //////////////////PROBLEM 5////////////////////
 
@@ -63,8 +73,10 @@
 // character at index 2 of "wide": "d"
 // cipherize will return: "d"
 
-  //Code here
-
+//Code here
+function cipherize(arr, str) {
+    return arr[arr.indexOf(str)].charAt(arr.indexOf(str))
+}
 
 
 //////////////////PROBLEM 6////////////////////
@@ -74,4 +86,7 @@
 //string. Use built-in methods for taking the string 
 //apart, reversing it, and putting it back together again.
 
-  //Code here
+//Code here
+function reverseMe(str) {
+    return str.split('').reverse().join('')
+}
